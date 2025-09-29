@@ -8,7 +8,7 @@
   set page(
     "a4",
     margin: (
-      top: 2.5cm,
+      top: 1.5cm,
       left: 3cm,
       right: 2cm,
       bottom: 2cm,
