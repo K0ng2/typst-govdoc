@@ -4,7 +4,7 @@
   // TODO: Add comma
   set enum(numbering: n => thnum(n) + ".")
   set par(first-line-indent: 2.5cm, justify: true, leading: 0.6em)
-  show par: set block(spacing: 1em)
+  set par(spacing: 1em)
   set page(
     "a4",
     margin: (
