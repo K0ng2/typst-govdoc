@@ -38,6 +38,7 @@
   title: "",
   attention: "",
   refer-to: "",
+  garuda: true,
   attachments: (),
 ) = thai({
   {
@@ -51,12 +52,14 @@
         }
         ที่#h(0.3cm)#thnum(id)
       ]),
-      align(center + top, {
-        if secrecy.len() > 0 {
-          place(top + center, dy: -2em, stamp(secrecy))
-        }
-        block(image("garuda.svg", height: 3cm))
-      }),
+      if garuda == true [
+        #align(center + top, {
+          if secrecy.len() > 0 {
+            place(top + center, dy: -2em, stamp(secrecy))
+          }
+          block(image("garuda.svg", height: 3cm))
+        })
+      ],
       align(left + bottom, address),
     )
 
