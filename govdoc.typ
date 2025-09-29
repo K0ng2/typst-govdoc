@@ -19,10 +19,10 @@
 }
 
 #let center-left(body) = {
-  style(styles => {
-    let size = measure(body, styles)
-    align(center, move(dx: size.width/2, body))
-  })
+  context {
+    let size = measure(body)
+    align(center, move(dx: size.width / 2, body))
+  }
 }
 
 #let stamp(body) = {
@@ -53,11 +53,11 @@
       ]),
       align(center + top, {
         if secrecy.len() > 0 {
-          place(top + center, dy: -2em,  stamp(secrecy))
+          place(top + center, dy: -2em, stamp(secrecy))
         }
         block(image("garuda.svg", height: 3cm))
       }),
-      align(left + bottom, address)
+      align(left + bottom, address),
     )
 
     v(6pt)
@@ -109,7 +109,7 @@
   center-left([
     #signoff
     #v(44pt)
-    
+
     (#name)\
     #position
   ])
@@ -117,7 +117,7 @@
 
 #let govsender(body) = {
   set par(first-line-indent: 0cm)
-  
-  v(16pt*4)
+
+  v(16pt * 4)
   block(breakable: false, body)
 }
